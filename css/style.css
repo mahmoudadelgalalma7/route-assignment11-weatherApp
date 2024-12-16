@@ -1,0 +1,141 @@
+/* Glopar */
+
+:root {
+    --mainColor:#009ad8;
+    --secondColor:#1e202b;
+}
+
+/* Start Navbar */
+nav {
+    background-color: #1e202b;
+}
+.navbar-nav{
+    --bs-navbar-color:#FFF;
+    .nav-link {
+        transition:.3s ease;
+        border:2px solid transparent;
+        &:hover,
+        &.active{
+            color:var(--mainColor);
+            border-color: var(--mainColor);
+        }
+        
+    }
+}
+    .navbar-toggler {
+        border:2px solid transparent !important;
+    &:focus {
+    outline: 0;
+    box-shadow: none;
+    }
+}
+@media (max-width:991px) {
+    .nav-link {
+        background-color:#262936;
+        border:0;
+    }
+    .nav-link:hover {
+    border:2px solid transparent !important;
+    }
+
+}
+
+/* End Navbar */
+/* Start Layout */
+#layout {
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    height: 50vh;
+}
+.input-group input {
+    background-color: var(--secondColor);
+    border:0;
+    &::placeholder{
+        color:#888;
+    }
+    &:focus{
+        background-color: var(--secondColor);
+    }
+}
+#button-addon2,
+#button-addon3 {
+    right:.5rem;
+    background-color: var(--mainColor);
+    color:#FFF;
+    padding-inline: 40px;
+}
+/* End Layout */
+/* Start Forecast */
+#forecast{
+    background-color:#1e202b
+}
+.forecast .card {
+    height: 100%;
+    --bs-border-radius:0;
+    .header{
+        background-color:#2d303d;
+    }
+    background-color:#323544;
+    .card-title {
+        color:#bfc1c8;
+    font-weight: 400;
+    font-size: 18px;
+    }
+    .card-header{
+        color:#bfc1c8;
+    font-weight: 400;
+    font-size: 14px;
+    }
+    .card-body{
+        align-content: center;
+    }
+}
+.forecast .card.two{
+    .header{
+        background-color:#222530;
+    }
+    background-color:#262936;
+}
+/* End Forecast */
+/* Start Footer */
+footer .icons a:hover i{
+    background-color:var(--mainColor) !important;
+    color:#FFF !important;
+}
+
+/* End Footer */
+
+/* spinner */
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: var(--mainColor) transparent;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
